@@ -1,0 +1,22 @@
+{
+  "name": "ncu-api",
+  "version": "1.0.0",
+  "description": "tool of crawl the information from NCU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo haha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZoneTwelve/ncu-api.git"
+  },
+  "keywords": [
+    "Third-Party-API"
+  ],
+  "author": "ZoneTwelve",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ZoneTwelve/ncu-api/issues"
+  },
+  "homepage": "https://github.com/ZoneTwelve/ncu-api#readme"
+}
