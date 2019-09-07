@@ -12,6 +12,9 @@ async function main(params){
   return await new Promise((resolve, reject)=>{
     let options = {
       url:`${urls.main}/${urls.home}?pageNum_OSDS_bulletin=${page}`,
+      headers:{
+        "User-Agent":config.agent,
+      },
     }
     request(options, (e,r,d)=>{
       if(e||!d)
@@ -29,8 +32,14 @@ async function main(params){
           top:tag[0].attr("data-pin"),
         });
       }
-      data.time = Number(new Date());
-      return resolve(data);
+      if(data.filter(v=>v.top==0&&v.date!="").length==0)
+        return reject({
+          error:"not thing here"
+        })
+      return resolve({
+        data:data,
+        update:Number(new Date()),
+      });
     }); 
   });
 }
